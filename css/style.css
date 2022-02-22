@@ -29,6 +29,19 @@ ul {
     padding: 0;
 }
 
+.button_1 {
+    height: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 0;
+
+    color: #fff;
+    background: #d30ed3;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 /* Header */
 header {
     padding-top: 30px;
@@ -113,6 +126,32 @@ header a:hover {
 
     font-weight: 700;
     font-size: 1.5rem;
-
-    /* color: #e8491d; */
 }
+
+/* Newsletter area */
+#newsletter {
+    padding: 15px;
+    
+    color: #fff;
+    background: #35424a;
+}
+
+#newsletter h1 {
+    float: left;
+}
+
+#newsletter form {
+    float:right;
+
+    width: 30%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* Boxes */
