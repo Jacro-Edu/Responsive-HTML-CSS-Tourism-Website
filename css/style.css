@@ -17,6 +17,11 @@ body {
 }
 
 /* Global-------------------------------------------------------------------------------------------------------- */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+
+}
 .container {
     width: 80%;
     margin: auto;
@@ -155,3 +160,37 @@ header a:hover {
 }
 
 /* Boxes */
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+
+    text-align: center;
+
+    width: 30%;
+
+    padding: 10px;
+}
+
+#boxes .box img {
+    height: 90px;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+
+    height: 3rem;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+
+    color: #fff;
+    background-color: #d30ed3;
+    font-weight: 700;
+
+    text-align: center;
+}
