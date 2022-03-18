@@ -1,3 +1,12 @@
+/* CSS Variables ------------------------------------------------------------------------------------------------ */
+
+:root {
+    --main-page-background-color: #f4f4f4;
+    --main-accent-color: #d30ed3;
+    --panel-background-color: #e6e6e6;
+}
+
+
 /* CSS Reset & Normalise */
 * {
   box-sizing: border-box;
@@ -13,8 +22,9 @@ body {
 
     font: 16px/1.5 Arial, Helvetica, sans-serif;
 
-    background-color: #f4f4f4;
+    background-color: var(--main-page-background-color);
 }
+
 
 /* Global-------------------------------------------------------------------------------------------------------- */
 #page-container {
@@ -48,7 +58,7 @@ a:visited {
     border: 0;
 
     color: #fff;
-    background: #d30ed3;
+    background: var(--main-accent-color);
 
     font-size: 1rem;
     font-weight: 600;
@@ -74,7 +84,7 @@ header {
     background-color: #35424a;
 
     color: #fff;
-    border-bottom: #d30ed3 3px solid;
+    border-bottom: var(--main-accent-color) 3px solid;
 }
 
 header a {
@@ -105,7 +115,7 @@ header nav {
 }
 
 header .highlight {
-    color: #d30ed3;
+    color: var(--main-accent-color);
 }
 
 .container li {
@@ -117,7 +127,7 @@ header .highlight {
 }
 
 header .current {
-        background-color: #d30ed3;
+        background-color: var(--main-accent-color);
         font-weight: bold;
         color: white;
         border-top-left-radius: 4px;
@@ -155,7 +165,7 @@ header a:hover {
 }
 
 #showcase span {
-    color: #d30ed3;
+    color: var(--main-accent-color);
 }
 
 #showcase p {
@@ -220,7 +230,7 @@ header a:hover {
 }
 
 #boxes .box:hover {
-    border: 4px #d30ed3 solid;
+    border: 4px var(--main-accent-color) solid;
 }
 
 /* Sidebar */
@@ -255,7 +265,7 @@ article#main-col {
 article#main-col a {
     text-decoration: none;
 
-    color: #d30ed3;
+    color: var(--main-accent-color);
     font-weight: bold;
 }
 
@@ -279,7 +289,7 @@ footer {
     margin-top: 100px;
 
     color: #fff;
-    background-color: #d30ed3;
+    background-color: var(--main-accent-color);
     font-weight: 700;
 
     text-align: center;
@@ -301,7 +311,7 @@ footer p {
  border: #ccc solid 1px;
  margin-top: 10px;
 
- background: #e6e6e6;
+ background: var(--panel-background-color);
 
  border-radius: 5px;
 }
@@ -363,7 +373,7 @@ footer p {
         font-size: 1rem;
     }
     header .current {
-        background-color: #d30ed3;
+        background-color: var(--main-accent-color);
         padding: 0.5rem;
         font-weight: bold;
         color: white;
