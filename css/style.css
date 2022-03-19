@@ -4,8 +4,18 @@
     --main-page-background-color: #f4f4f4;
     --main-accent-color: #d30ed3;
     --panel-background-color: #e6e6e6;
+    --inverted-text-color: #fff;
+    --header-background-color: #35424a;
+
 }
 
+header {
+    --nav-bar-highlight-accent: #ffb3ff;
+}
+
+#showcase {
+    --showcase-background: rgba(53, 66, 74, 0.6);
+}
 
 /* CSS Reset & Normalise */
 * {
@@ -57,7 +67,7 @@ a:visited {
     padding-right: 20px;
     border: 0;
 
-    color: #fff;
+    color: var(--inverted-text-color);
     background: var(--main-accent-color);
 
     font-size: 1rem;
@@ -73,7 +83,7 @@ a:visited {
     border-radius: 5px;
 
     background: #62686b;
-    color: #fff;
+    color: var(--inverted-text-color);
 }
 
 /* Header --------------------------------------------------------------------------------------------------------*/
@@ -81,9 +91,9 @@ header {
     padding-top: 30px;
     min-height: 70px;
 
-    background-color: #35424a;
+    background-color: var(--header-background-color);
 
-    color: #fff;
+    color: var(--inverted-text-color);
     border-bottom: var(--main-accent-color) 3px solid;
 }
 
@@ -92,7 +102,7 @@ header a {
     text-transform: uppercase;
     font-size: 1rem;
 
-    color: #fff;
+    color: var(--inverted-text-color);
 }
 
 header li {
@@ -126,18 +136,21 @@ header .highlight {
     height: 100%;
 }
 
-header .current {
-        background-color: var(--main-accent-color);
-        font-weight: bold;
-        color: white;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        padding: 1rem;
+header li:hover {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 1rem;
+    background-color: var(--nav-bar-highlight-accent);
+    color: var(--inverted-text-color);
 }
 
-header a:hover {
-    color: #fff;
+header .current {
+    background-color: var(--main-accent-color);
     font-weight: bold;
+    color: var(--inverted-text-color);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 1rem;
 }
 
 /* Showcase --------------------------------------------------------------------------------------------------------*/
@@ -152,11 +165,11 @@ header a:hover {
     background-repeat: no-repeat;
     background-origin: border-box;
     background-clip: border-box;
-    background-color: rgba(53, 66, 74, 0.6);
+    background-color: var(--showcase-background);
     background-blend-mode: multiply;
     
     text-align: center;
-    color: #fff;
+    color: var(--inverted-text-color);
 }
 
 #showcase h1 {
@@ -184,8 +197,8 @@ header a:hover {
 #newsletter {
     padding: 15px;
     
-    color: #fff;
-    background: #35424a;
+    color: var(--inverted-text-color);
+    background: var(--header-background-color);
 }
 
 #newsletter h1 {
@@ -246,7 +259,7 @@ aside#sidebar p {
 aside#sidebar a {
     text-decoration: none;
 
-    color: #fff;
+    color: var(--inverted-text-color);
     font-weight: bold;
 }
 
@@ -288,7 +301,7 @@ footer {
     padding: 30px 0 30px 0;
     margin-top: 100px;
 
-    color: #fff;
+    color: var(--inverted-text-color);
     background-color: var(--main-accent-color);
     font-weight: 700;
 
@@ -376,7 +389,7 @@ footer p {
         background-color: var(--main-accent-color);
         padding: 0.5rem;
         font-weight: bold;
-        color: white;
+        color: var(--inverted-text-color);
     }
 
 
