@@ -3,6 +3,7 @@
 :root {
     --main-page-background-color: #f4f4f4;
     --main-accent-color: #d30ed3;
+    --nav-bar-highlight-accent: #ffb3ff;
     --panel-background-color: #e6e6e6;
     --inverted-text-color: #fff;
     --header-background-color: #35424a;
@@ -10,7 +11,7 @@
 }
 
 header {
-    --nav-bar-highlight-accent: #ffb3ff;
+
 }
 
 #showcase {
@@ -75,6 +76,16 @@ a:visited {
 
     border-radius: 4px;
 }
+
+.button_1:hover {
+    background-color: var(--nav-bar-highlight-accent);
+    transition: background-color 0.1s ease-in;
+
+    }
+    
+.button_1:not(:hover) {
+        transition: background-color 0.1s ease-out;
+    }
 
 .dark {
     margin-top: 0.5rem;
@@ -216,7 +227,7 @@ header .current {
 #newsletter input[type="email"] {
     padding: 4px;
     height: 25px;
-    width: 150px;
+    /* width: 150px; */
 
     border-radius: 4px;
 }
