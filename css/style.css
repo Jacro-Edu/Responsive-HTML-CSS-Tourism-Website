@@ -10,10 +10,6 @@
 
 }
 
-header {
-
-}
-
 #showcase {
     --showcase-background: rgba(53, 66, 74, 0.6);
 }
@@ -105,15 +101,18 @@ a:visited {
     color: var(--inverted-text-color);
 }
 
+.text_highlight {
+    color: var(--main-accent-color);
+}
+
 /* Header --------------------------------------------------------------------------------------------------------*/
 header {
-    padding-top: 30px;
     min-height: 70px;
-
-    background-color: var(--header-background-color);
+    padding-top: 30px;
+    border-bottom: var(--main-accent-color) 3px solid;
 
     color: var(--inverted-text-color);
-    border-bottom: var(--main-accent-color) 3px solid;
+    background-color: var(--header-background-color);
 }
 
 header #branding {
@@ -129,23 +128,21 @@ header nav {
     margin-top: 10px;
 }
 
-header .highlight {
+header nav .highlight {
     color: var(--main-accent-color);
-}
-
-header li {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-
-    color: var(--inverted-text-color);
 }
 
 header li {
     display: inline;
     float: left;
+
     padding: 1rem;
-    /* font-weight: bold; */
+
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+
+    color: var(--inverted-text-color);
 }
 
 header li:hover {
@@ -162,14 +159,14 @@ header li:not(:hover) {
     transition: background-color 0.1s ease-out;
 }
 
-
 header .current {
-    background-color: var(--main-accent-color);
-    font-weight: bold;
-    color: var(--inverted-text-color);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     padding: 1rem;
+
+    background-color: var(--main-accent-color);
+    font-weight: bold;
+    color: var(--inverted-text-color);
 }
 
 /* Showcase --------------------------------------------------------------------------------------------------------*/
@@ -196,10 +193,6 @@ header .current {
     font-size: 4rem;
 }
 
-#showcase span {
-    color: var(--main-accent-color);
-}
-
 #showcase p {
     margin-top: 30px;
 
@@ -220,12 +213,8 @@ header .current {
     background: var(--header-background-color);
 }
 
-#newsletter h1 .highlight {
-    color: var(--main-accent-color);
-}
-
 #newsletter form {
-    display: inherit;
+    display: flex;
 }
 
 #newsletter .wrapper {
@@ -254,21 +243,6 @@ header .current {
     width: 180px;
     padding: 4px;
 }
-
-/* #newsletter form {
-    float:right;
-
-    width: 30%;
-    margin: auto;
-    margin-top: 15px;
-}
-
-#newsletter input[type="email"] {
-    padding: 4px;
-    height: 25px;
-
-    border-radius: 4px;
-} */
 
 /* Boxes --------------------------------------------------------------------------------------------------------*/
 #boxes {
@@ -432,32 +406,27 @@ footer p {
         font-size: 3rem;
     }
 
-    header nav li {
+    header li {
         display: block;
 
-        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+
         font-weight: 700;
+        font-size: 1.25rem;
     }
 
     header {
         padding-bottom: 20px;
     }
 
-    header li {
-        padding: 0.25rem;
-        border-radius: 4px;
-    }
-
-    header a li {
-        font-size: 1rem;
-    }
-
     header li:hover {
-        padding: 0.25rem;
-}
+        padding: 0.5rem;
+    }
 
     header .current {
-        padding: 0.25rem;
+        padding: 0.5rem;
     }
 
     #showcase h1 {
@@ -474,10 +443,12 @@ footer p {
         font-size: 1.4rem
     }
 
-    #newsletter .wrapper {
-        display: flex;
+    #newsletter form {
         flex-direction: column;
-        align-items: center;
+    }
+
+    #newsletter .wrapper {
+        flex-direction: column;
     }
 
     #newsletter .wrapper label {
@@ -493,11 +464,20 @@ footer p {
     .wrapper .form-column input {
         border-radius: 4px;
         padding: 8px;
-        width: 100%;
     }
 
     .dark {
         margin-top: 40px;
+    }
+
+    #boxes .box {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    #boxes .box img {
+        height: 70px;
     }
 
     #sidebar p,
