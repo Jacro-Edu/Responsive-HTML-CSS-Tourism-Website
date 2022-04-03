@@ -285,6 +285,10 @@ aside#sidebar {
     margin-top: 10px;
 }
 
+aside#sidebar h3 {
+    font-size: 1.5rem;
+}
+
 aside#sidebar p {
     font-style: italic;
 }
@@ -302,12 +306,12 @@ aside#sidebar ul li {
 }
 
 /* Main-col */
-article#main-col {
+div#main-col {
     float: left;
     width: 65%;
 }
 
-article#main-col a {
+div#main-col a {
     text-decoration: none;
 
     color: var(--main-accent-color);
@@ -316,12 +320,14 @@ article#main-col a {
 
 /* Bottom image section -------------------------------------------------------------------------------------------*/
 #image {
+    margin: auto;
     margin-top: 50px;
+    width: 80%;
 }
 .image-container {
-    width: 1500px;
-    overflow: hidden;
+    width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
 .image-container img {
@@ -374,7 +380,7 @@ footer p {
     #newsletter h1,
     #newsletter form,
     #boxes .box,
-    article#main-col,
+    div#main-col,
     aside#sidebar {
         float: none;
         width: 100%;
@@ -389,8 +395,13 @@ footer p {
         text-align: center;
     }
 
-    .container {
+    .container,
+    #image {
         width: 90%;
+    }
+
+    #image {
+        margin-top: 70px;
     }
 
     .container_narrow {
@@ -484,4 +495,5 @@ footer p {
     #sidebar ul li {
         text-align: left;
     }
+
 }
