@@ -17,7 +17,7 @@
         <header>
             <div class="container">
                 <div id="branding">
-                    <h1><span class="highlight">Visit</span> Liverpool</h1>
+                    <h1><span class="text_highlight">Visit</span> Liverpool</h1>
                 </div>
                 <nav>
                     <ul>
@@ -35,7 +35,7 @@
         <main class="main">
             <section id="showcase">
                 <div class="container">
-                    <h1><span class="title-highlight">Where</span> to Stay in Liverpool</h1>
+                    <h1><span class="text_highlight">Where</span> to Stay in Liverpool</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna
                         aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -44,11 +44,21 @@
             </section>
             <section id="newsletter">
                 <div class="container_narrow">
-                    <h1>Subscribe To Our Newsletter</h1>
-                    <!-- <p>Subscribe to see the latest information on events, cultural happenings, new food and drink venues, and offers for the Liverpool City Region to help plan your stay and make the most of your time in the city!</p> -->
+                    <h1><span class="text_highlight">Subscribe </span>To Our Newsletter</h1>
                     <form>
-                        <input type="email" placeholder="Enter Email...">
-                        <button type="submit" class="button_1">Subscribe</button>
+                        <ul class="wrapper">
+                            <li class="form-column">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" placeholder="Enter Name...">
+                            </li>
+                            <li class="form-column">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" placeholder="Enter Email...">
+                            </li>
+                            <li class="form-column">
+                                <button type="submit" class="button_1">Subscribe</button>
+                            </li>
+                        </ul>
                     </form>
                 </div>
             </section>
