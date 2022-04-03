@@ -287,6 +287,7 @@ aside#sidebar {
 
 aside#sidebar h3 {
     font-size: 1.5rem;
+    text-shadow: 2px 2px 4px #35424a ;
 }
 
 aside#sidebar p {
@@ -309,6 +310,10 @@ aside#sidebar ul li {
 div#main-col {
     float: left;
     width: 65%;
+}
+
+div#main-col article {
+    margin-bottom: 1rem;
 }
 
 div#main-col a {
@@ -355,16 +360,15 @@ footer p {
 }
 
 /* Services ------------------------------------------------------------------------------------------------------*/
-.panels {
- list-style: none;
+.panel,
+.no-panel {
  padding: 20px;
-
- border: #ccc solid 1px;
- margin-top: 10px;
-
- background: var(--panel-background-color);
-
  border-radius: 5px;
+}
+
+.panel {
+    border: #ccc solid 1px;
+    background: var(--panel-background-color);
 }
 
 .page-title {
@@ -494,6 +498,10 @@ footer p {
     #sidebar p,
     #sidebar ul li {
         text-align: left;
+    }
+
+    div#main-col article {
+        margin-bottom: 0.5rem;
     }
 
 }
