@@ -325,9 +325,9 @@ div#main-col a {
 
 /* Bottom image section -------------------------------------------------------------------------------------------*/
 #image {
-    margin: auto;
     margin-top: 50px;
-    width: 80%;
+    width: 60%;
+    margin: auto;
 }
 .image-container {
     width: 100%;
