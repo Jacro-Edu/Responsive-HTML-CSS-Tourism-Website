@@ -61,7 +61,6 @@
         background-color: var(--main-page-background-color);
     }
     
-    
     a {
         text-decoration: none;
     }
@@ -94,40 +93,44 @@
     /* 6.1 Page Wide/Multiple Areas ------------------------------------------------------ */
     /* ----------------------------------------------------------------------------------- */
 
-            #page-container {
-                position: relative;
-                min-height: 100vh;
-            }
-            
-            .container {
-                width: 80%;
-                margin: auto;
-            
-                overflow: hidden;
-            }
-            
-            .container_narrow {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            
-                max-width: 70%;
-                margin: auto;
-            }
-            
+        #page-container {
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+        
+            overflow: hidden;
+        }
+        
+        .container_narrow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        
+            max-width: 70%;
+            margin: auto;
+        }
+
+        .text_highlight {
+            color: var(--main-accent-color);
+        }
+        
+        /* Email 'Subscribe' Button----------- */
             .button_1 {
                 height: 38px;
                 padding-left: 20px;
                 padding-right: 20px;
                 border: 0;
+                border-radius: 4px;
             
                 color: var(--inverted-text-color);
                 background: var(--main-accent-color);
             
                 font-size: 1rem;
                 font-weight: 600;
-            
-                border-radius: 4px;
             }
             
             .button_1:hover {
@@ -137,37 +140,6 @@
             
             .button_1:not(:hover) {
                 transition: background-color 0.1s ease-out;
-            }
-            
-            .dark {
-                margin-top: 0.5rem;
-                margin-bottom: 0.5rem;
-                padding: 2rem;
-                border-radius: 5px;
-            
-                background: #62686b;
-                color: var(--inverted-text-color);
-            
-            }
-            
-            .text_highlight {
-                color: var(--main-accent-color);
-            }
-            
-            
-            .page-title {
-                font-size: 24px
-            }
-            
-            .panel,
-            .no-panel {
-                padding: 20px;
-                border-radius: 5px;
-            }
-            
-            .panel {
-                border: #ccc solid 1px;
-                background: var(--panel-background-color);
             }
 
     /* ----------------------------------------------------------------------------------- */
@@ -272,12 +244,45 @@
                 font-size: 1.5rem;
             }
     
-        /* Main Content -------------------------------------------------------------------- */
+        /* Main Content/Main-col----------------------------------------------------- */
             #main-content {
                 margin-top: 50px;
             }
+
+            div#main-col {
+                float: left;
+                width: 65%;
+            }
+            
+            div#main-col article {
+                margin-bottom: 1rem;
+            }
+            
+            div#main-col a {
+                text-decoration: none;
+            
+                color: var(--main-accent-color);
+                font-weight: bold;
+            }
+
+            .page-title {
+                font-size: 24px
+            }
+
+        /* Grey content panels--------------------------- */
+            .panel,
+            .no-panel {
+                padding: 20px;
+                border-radius: 5px;
+            }
+            
+            .panel {
+                border: #ccc solid 1px;
+                background: var(--panel-background-color);
+            }
+
         
-        /* Newsletter area ------------------------------------------------------------------*/
+        /* Newsletter area -----------------------------------------------------------*/
             #newsletter {
                 padding: 15px;
             
@@ -316,85 +321,44 @@
                 padding: 4px;
             }
 
-    /* Boxes --------------------------------------------------------------------------------------------------------*/
-    #boxes {
-        margin-top: 20px;
-    }
-    
-    #boxes .box {
-        float: left;
-    
-        text-align: center;
-    
-        width: 30%;
-    
-        margin: 10px;
-        padding: 10px;
-    
-        border: 4px solid transparent;
-        border-radius: 4px;
-    }
-    
-    #boxes .box img {
-        height: 90px;
-    }
-    
-    #boxes .box:hover {
-        border: 4px var(--main-accent-color) solid;
-        border-radius: 4px;
-        transition: border-color 0.3s ease-in;
-    }
-    
-    #boxes .box:not(:hover) {
-        border: 4px solid transparent;
-        transition: border-color 0.5s ease-out;
-    }
-    
-    /* Sidebar---------------------------------------------------- */
-    aside#sidebar {
-        float: right;
-        width: 30%;
-        margin-top: 10px;
-    }
-    
-    aside#sidebar h3 {
-        font-size: 1.5rem;
-        text-shadow: 2px 2px 4px #35424a;
-    }
-    
-    aside#sidebar p {
-        font-style: italic;
-    }
-    
-    aside#sidebar a {
-        text-decoration: none;
-    
-        color: var(--inverted-text-color);
-        font-weight: bold;
-    }
-    
-    aside#sidebar ul li {
-        list-style-type: none;
-    
-        margin-top: 0.5rem;
-    }
-    
-    /* Main-col---------------------------------------------- */
-    div#main-col {
-        float: left;
-        width: 65%;
-    }
-    
-    div#main-col article {
-        margin-bottom: 1rem;
-    }
-    
-    div#main-col a {
-        text-decoration: none;
-    
-        color: var(--main-accent-color);
-        font-weight: bold;
-    }
+        /* Sidebar/Aisde---------------------------------------------------- */
+            .dark {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                padding: 2rem;
+                border-radius: 5px;
+            
+                background: #62686b;
+                color: var(--inverted-text-color);
+            }
+
+            aside#sidebar {
+                float: right;
+                width: 30%;
+                margin-top: 10px;
+            }
+            
+            aside#sidebar h3 {
+                font-size: 1.5rem;
+                text-shadow: 2px 2px 4px #35424a;
+            }
+            
+            aside#sidebar p {
+                font-style: italic;
+            }
+            
+            aside#sidebar a {
+                text-decoration: none;
+            
+                color: var(--inverted-text-color);
+                font-weight: bold;
+            }
+            
+            aside#sidebar ul li {
+                list-style-type: none;
+            
+                margin-top: 0.5rem;
+            }
 
     /* ----------------------------------------------------------------------------------- */
     /* 6.4 Footer------------------------------------------------------------------------- */
@@ -449,6 +413,40 @@
         /* Include CSS for specific things, broken down by the context, page, or 
 			 even component in which they are used. */
 
+    /* Boxes, index.html -------------------------------------------------*/
+        #boxes {
+            margin-top: 20px;
+        }
+    
+        #boxes .box {
+            float: left;
+        
+            text-align: center;
+        
+            width: 30%;
+        
+            margin: 10px;
+            padding: 10px;
+        
+            border: 4px solid transparent;
+            border-radius: 4px;
+        }
+        
+        #boxes .box img {
+            height: 90px;
+        }
+        
+        #boxes .box:hover {
+            border: 4px var(--main-accent-color) solid;
+            border-radius: 4px;
+            transition: border-color 0.3s ease-in;
+        }
+        
+        #boxes .box:not(:hover) {
+            border: 4px solid transparent;
+            transition: border-color 0.5s ease-out;
+        }
+
     /* Bottom image section, index.html -----------------------*/
         #image {
             margin-top: 50px;
@@ -466,7 +464,6 @@
             width: 100%;
         }
 
-
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 /* || 8. Media Queries------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------------------------- */
@@ -477,178 +474,197 @@
     /* min-width of 62em/992px for small desktop/laptop screens*/
     /* min-width of 87em/1392px for large desktop screens*/
 
-    @media(max-width: 768px) {
+    /* This website has been devoloped around a desktop-first approach rather than mobile-first */
+    @media screen and (max-width: 768px) {
         /* ----------------------------------------------------------------------------------- */
         /* Page Wide/Multiple Areas ---------------------------------------------------------- */
         /* ----------------------------------------------------------------------------------- */
-                header #branding,
-                header nav,
-                header nav li,
-                #newsletter h1,
-                #newsletter form,
-                #boxes .box,
-                div#main-col,
-                aside#sidebar {
-                    float: none;
-                    width: 100%;
-                }
-            
-                header #branding,
-                header nav,
-                header nav li,
-                #newsletter h1,
-                #newsletter form,
-                #boxes .box {
-                    text-align: center;
-                }
-            
-                .container,
-                #image {
-                    width: 90%;
-                }
-            
-                #image {
-                    margin-top: 70px;
-                }
-            
-                .container_narrow {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-            
-                    max-width: 100%;
-                    margin: auto;
-                }
+            header #branding,
+            header nav,
+            header nav li,
+            #newsletter h1,
+            #newsletter form,
+            #boxes .box,
+            div#main-col,
+            aside#sidebar {
+                float: none;
+                width: 100%;
+            }
+        
+            header #branding,
+            header nav,
+            header nav li,
+            #newsletter h1,
+            #newsletter form,
+            #boxes .box {
+                text-align: center;
+            }
+        
+            .container,
+            #image {
+                width: 90%;
+            }
+        
+            #image {
+                margin-top: 70px;
+            }
+        
+            .container_narrow {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+        
+                max-width: 100%;
+                margin: auto;
+            }
 
-            /* ----------------------------------------------------------------------------------- */
-            /* Header------------------------------------------------------------------------- */
-            /* ----------------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+        /* Header------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
 
+        
+            #branding h1 {
+                font-size: 2.5rem;
+            }
+        
+            header li {
+                display: block;
+        
+                margin-bottom: 0.5rem;
+                padding: 0.5rem;
+                border-radius: 4px;
+        
+                font-weight: 700;
+            }
+        
+            header {
+                padding-bottom: 20px;
+            }
+        
+            header li:hover {
+                padding: 0.5rem;
+            }
+        
+            header .current {
+                padding: 0.5rem;
+            }
             
-                #branding h1 {
-                    font-size: 2.5rem;
-                }
             
-                header li {
-                    display: block;
-            
-                    margin-bottom: 0.5rem;
-                    padding: 0.5rem;
-                    border-radius: 4px;
-            
-                    font-weight: 700;
-                }
-            
-                header {
-                    padding-bottom: 20px;
-                }
-            
-                header li:hover {
-                    padding: 0.5rem;
-                }
-            
-                header .current {
-                    padding: 0.5rem;
-                }
-                
-                
-            /* ----------------------------------------------------------------------------------- */
-            /* Main------------------------------------------------------------------------------- */
-            /* ----------------------------------------------------------------------------------- */
-                .dark {
-                    margin-top: 40px;
-                }
+        /* ----------------------------------------------------------------------------------- */
+        /* Main------------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+            .dark {
+                margin-top: 40px;
+            }
 
-                #showcase h1 {
-                    margin-top: 40px;
-            
-                    font-size: 2.5rem;
-                }
-            
-                #showcase p {
-                    font-size: 1.25rem;
-                }
-            
-                #newsletter h1 {
-                    font-size: 1.4rem
-                }
-            
-                #newsletter form {
-                    flex-direction: column;
-                }
-            
-                #newsletter .wrapper {
-                    flex-direction: column;
-                }
-            
-                #newsletter .wrapper label {
-                    font-size: 1rem;
-                    font-weight: bold;
-                }
-            
-                .wrapper .form-column {
-                    list-style: none;
-                    padding: 8px;
-                }
-            
-                .wrapper .form-column input {
-                    border-radius: 4px;
-                    padding: 8px;
-                }
-            
-                #boxes .box {
-                    max-width: 90%;
-                    margin: auto;
-                    margin-bottom: 1rem;
-                }
-            
-                #boxes .box img {
-                    height: 70px;
-                }
-            
-                #sidebar p,
-                #sidebar ul li {
-                    text-align: left;
-                }
-            
-                div#main-col article {
-                    margin-bottom: 0.5rem;
-                }
+            #showcase h1 {
+                margin-top: 40px;
+        
+                font-size: 2.5rem;
+            }
+        
+            #showcase p {
+                font-size: 1.25rem;
+            }
+        
+            #newsletter h1 {
+                font-size: 1.4rem
+            }
+        
+            #newsletter form {
+                flex-direction: column;
+            }
+        
+            #newsletter .wrapper {
+                flex-direction: column;
+            }
+        
+            #newsletter .wrapper label {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        
+            .wrapper .form-column {
+                list-style: none;
+                padding: 8px;
+            }
+        
+            .wrapper .form-column input {
+                border-radius: 4px;
+                padding: 8px;
+            }
+        
+            #boxes .box {
+                max-width: 90%;
+                margin: auto;
+                margin-bottom: 1rem;
+            }
+        
+            #boxes .box img {
+                height: 70px;
+            }
+        
+            #sidebar p,
+            #sidebar ul li {
+                text-align: left;
+            }
+        
+            div#main-col article {
+                margin-bottom: 0.5rem;
+            }
 
         /* ----------------------------------------------------------------------------------- */
         /* Footer----------------------------------------------------------------------------- */
         /* ----------------------------------------------------------------------------------- */
-            
-                .container_footer_main {
-                    flex-direction: column;
-                    justify-content: space-evenly;
-            
-                    padding-left: 2rem;
-                }
-            
-                .container_footer_vertical {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                }
-            
-                .container_footer_vertical h4 {
-                    font-size: 1.3rem;
-                }
-            
-                .container_footer_vertical li {
-                    margin-bottom: 0.25rem;
-                    list-style-type: none;
-            
-                    font-weight: 500;
-                }
-            
-                footer p {
-                    font-size: 1rem;
-                    font-weight: 500;
-                }
+        
+            .container_footer_main {
+                flex-direction: column;
+                justify-content: space-evenly;
+        
+                padding-left: 2rem;
+            }
+        
+            .container_footer_vertical {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        
+            .container_footer_vertical h4 {
+                font-size: 1.3rem;
+            }
+        
+            .container_footer_vertical li {
+                margin-bottom: 0.25rem;
+                list-style-type: none;
+        
+                font-weight: 500;
+            }
+        
+            footer p {
+                font-size: 1rem;
+                font-weight: 500;
+            }
             }
 
+    @media screen and (min-width: 769px) and (max-width: 1392px) {
+        /* ----------------------------------------------------------------------------------- */
+        /* Page Wide/Multiple Areas ---------------------------------------------------------- */	
+        /* ----------------------------------------------------------------------------------- */
+
+        /* ----------------------------------------------------------------------------------- */
+        /* Header------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+
+        /* ----------------------------------------------------------------------------------- */
+        /* Main------------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+
+        /* ----------------------------------------------------------------------------------- */
+        /* Footer----------------------------------------------------------------------------- */	
+        /* ----------------------------------------------------------------------------------- */
+
+    }
 
 
 
