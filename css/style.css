@@ -651,14 +651,94 @@
         /* ----------------------------------------------------------------------------------- */
         /* Page Wide/Multiple Areas ---------------------------------------------------------- */	
         /* ----------------------------------------------------------------------------------- */
-
+            .container {
+                width: 80%;
+            }
         /* ----------------------------------------------------------------------------------- */
         /* Header------------------------------------------------------------------------- */
         /* ----------------------------------------------------------------------------------- */
+            header #branding,
+            header nav,
+            header nav li,
+            #newsletter h1,
+            #newsletter form,
+            #boxes .box,
+            div#main-col,
+            aside#sidebar {
+                float: none;
+                width: 100%;
+            }
+        
+            header #branding,
+            header nav,
+            header nav li,
+            #newsletter h1,
+            #newsletter form,
+            #boxes .box {
+                text-align: center;
+            }
+
+            header #branding h1 {
+                font-size: 3rem;
+            }
+
+            header li {
+                padding: 0.75rem;
+                padding-bottom: 1rem;
+                font-size: 0.9rem;
+            }
+
+            header li:hover {
+                padding: 0.75rem;
+            }
+
+            header .current {
+                padding: 0.75rem;
+            }
 
         /* ----------------------------------------------------------------------------------- */
         /* Main------------------------------------------------------------------------------- */
         /* ----------------------------------------------------------------------------------- */
+             /* Showcase ------------------------- */
+        
+                #showcase h1 {
+                    font-size: 2.5rem;
+                }
+
+                #showcase p {
+                    font-size: 1.25rem
+                }
+
+            /* Newsletter ------------------------ */
+                #newsletter {
+                    padding: 10px;
+                }
+
+                #newsletter .container_narrow {
+                    flex-direction: column;
+                }
+
+                .wrapper {
+                    width: 100%;
+                }
+
+                #newsletter .wrapper {
+                    justify-content: space-around;
+                }
+
+            .panel,
+            .no-panel {
+                margin: auto;
+            }
+
+            aside#sidebar {
+                width: 100%;
+            }
+
+            #image {
+                width: 80%;
+                margin-top: 3rem;
+            }
 
         /* ----------------------------------------------------------------------------------- */
         /* Footer----------------------------------------------------------------------------- */	
