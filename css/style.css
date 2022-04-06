@@ -1,561 +1,660 @@
-/* CSS Variables ------------------------------------------------------------------------------------------------ */
-
-:root {
-    --main-page-background-color: #f4f4f4;
-    --main-accent-color: #d30ed3;
-    --nav-bar-highlight-accent: #ffb3ff;
-    --panel-background-color: #e6e6e6;
-    --inverted-text-color: #fff;
-    --header-background-color: #35424a;
-}
-
-#showcase {
-    --showcase-background: rgba(53, 66, 74, 0.6);
-}
-
-/* CSS Reset & Normalise */
-* {
-  box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-
-    font: 16px/1.5 Arial, Helvetica, sans-serif;
-
-    background-color: var(--main-page-background-color);
-}
-
-
-/* Global-------------------------------------------------------------------------------------------------------- */
-#page-container {
-    position: relative;
-    min-height: 100vh;
-}
-.container {
-    width: 80%;
-    margin: auto;
-
-    overflow: hidden;
-}
-
-.container_narrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    max-width: 70%;
-    margin: auto;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:visited,
-a:active,
-a:focus {
-    color: inherit;
-}
-
-.button_1 {
-    height: 38px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 0;
-
-    color: var(--inverted-text-color);
-    background: var(--main-accent-color);
-
-    font-size: 1rem;
-    font-weight: 600;
-
-    border-radius: 4px;
-}
-
-.button_1:hover {
-    background-color: var(--nav-bar-highlight-accent);
-    transition: background-color 0.1s ease-in;
-}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 1. Reset/Normalise---------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+    * {
+        box-sizing: border-box;
+    }
     
-.button_1:not(:hover) {
-        transition: background-color 0.1s ease-out;
-}
-
-.dark {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 2rem;
-    border-radius: 5px;
-
-    background: #62686b;
-    color: var(--inverted-text-color);
-
-}
-
-.text_highlight {
-    color: var(--main-accent-color);
-}
-
-/* Header --------------------------------------------------------------------------------------------------------*/
-header {
-    min-height: 70px;
-    padding-top: 30px;
-    border-bottom: var(--main-accent-color) 3px solid;
-
-    color: var(--inverted-text-color);
-    background-color: var(--header-background-color);
-}
-
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
-    margin: 0;
-}
-
-header nav {
-    float: right;
-    margin-top: 10px;
-}
-
-header nav .highlight {
-    color: var(--main-accent-color);
-}
-
-header li {
-    display: inline;
-    float: left;
-
-    padding: 1rem;
-
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: bold;
-
-    color: var(--inverted-text-color);
-}
-
-header li:hover {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    padding: 1rem;
-    background-color: var(--nav-bar-highlight-accent);
-    color: var(--inverted-text-color);
-
-    transition: background-color 0.1s ease-in;
-}
-
-header li:not(:hover) {
-    transition: background-color 0.1s ease-out;
-}
-
-header .current {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    padding: 1rem;
-
-    background-color: var(--main-accent-color);
-    font-weight: bold;
-    color: var(--inverted-text-color);
-}
-
-/* Showcase --------------------------------------------------------------------------------------------------------*/
-#showcase {
-    min-height: 300px;
-    width: 100%;
-    margin: auto;
-
-    background-image: url('../img/showcase2.jpg');
-    background-position: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-origin: border-box;
-    background-clip: border-box;
-    background-color: var(--showcase-background);
-    background-blend-mode: multiply;
+    html {
+        font-size: 16px;
+    }
     
-    text-align: center;
-    color: var(--inverted-text-color);
-}
-
-#showcase h1 {
-    margin-top: 50px;
-    font-size: 4rem;
-}
-
-#showcase p {
-    margin-top: 30px;
-
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-/* Main Content -------------------------------------------------------------------------------------------------- */
-#main-content {
-    margin-top: 50px;
-}
-
-/* Newsletter area ------------------------------------------------------------------------------------------------*/
-#newsletter {
-    padding: 15px;
+    body {
+        padding: 0;
+        margin: 0;
     
-    color: var(--inverted-text-color);
-    background: var(--header-background-color);
-}
-
-#newsletter form {
-    display: flex;
-}
-
-#newsletter .wrapper {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.wrapper .form-column {
-    display: flex;
-    list-style: none;
-
-    padding: 10px;
-}
-
-.wrapper .form-column label {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-right: 4px;
-}
-
-.wrapper .form-column input {
-    border-radius: 4px;
-    width: 180px;
-    padding: 4px;
-}
-
-/* Boxes --------------------------------------------------------------------------------------------------------*/
-#boxes {
-    margin-top: 20px;
-}
-
-#boxes .box {
-    float: left;
-
-    text-align: center;
-
-    width: 30%;
-
-    margin: 10px;
-    padding: 10px;
-
-    border: 4px solid transparent; 
-    border-radius: 4px;
-}
-
-#boxes .box img {
-    height: 90px;
-}
-
-#boxes .box:hover {
-    border: 4px var(--main-accent-color) solid;
-    border-radius: 4px;
-    transition: border-color 0.3s ease-in;
-}
-
-#boxes .box:not(:hover) {
-    border: 4px solid transparent;
-    transition: border-color 0.5s ease-out;
-}
-
-/* Sidebar */
-aside#sidebar {
-    float: right;
-    width: 30%;
-    margin-top: 10px;
-}
-
-aside#sidebar h3 {
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 4px #35424a ;
-}
-
-aside#sidebar p {
-    font-style: italic;
-}
-aside#sidebar a {
-    text-decoration: none;
-
-    color: var(--inverted-text-color);
-    font-weight: bold;
-}
-
-aside#sidebar ul li {
-    list-style-type: none;
-
-    margin-top: 0.5rem;
-}
-
-/* Main-col */
-div#main-col {
-    float: left;
-    width: 65%;
-}
-
-div#main-col article {
-    margin-bottom: 1rem;
-}
-
-div#main-col a {
-    text-decoration: none;
-
-    color: var(--main-accent-color);
-    font-weight: bold;
-}
-
-/* Bottom image section -------------------------------------------------------------------------------------------*/
-#image {
-    margin-top: 50px;
-    width: 60%;
-    margin: auto;
-}
-.image-container {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: 100%;
-}
-
-/* Footer --------------------------------------------------------------------------------------------------------*/
-
-footer {
-    width: 100%;
-    padding: 30px 0 30px 0;
-    margin-top: 100px;
-
-    color: var(--inverted-text-color);
-    background-color: var(--main-accent-color);
-    font-weight: 700;
-}
-
-.container_footer_main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.container_footer_vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.container_footer_vertical h4 {
-    font-size: 1.3rem;
-}
-
-.container_footer_vertical li {
-    margin-bottom: 0.25rem;
-    list-style-type: none;
-
-    font-weight: 500;
-}
-
-footer p {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin-top: 3rem;
-
-    font-style: italic;
-}
-
-/* Services ------------------------------------------------------------------------------------------------------*/
-.panel,
-.no-panel {
- padding: 20px;
- border-radius: 5px;
-}
-
-.panel {
-    border: #ccc solid 1px;
-    background: var(--panel-background-color);
-}
-
-.page-title {
-    font-size: 24px
-}
-
-/* Media Queries ------------------------------------------------------------------------------------------------------*/
-
-@media(max-width: 768px) {
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box,
-    div#main-col,
-    aside#sidebar {
-        float: none;
-        width: 100%;
+        font: 16px/1.5 Arial, Helvetica, sans-serif;
     }
 
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 2. Web Fonts---------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 3. CSS Custom Properties/CSS Variables-------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+        /* 3.1 Page Wide/Multiple Areas------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+
+            :root {
+                --main-page-background-color: #f4f4f4;
+                --main-accent-color: #d30ed3;
+                --nav-bar-highlight-accent: #ffb3ff;
+                --panel-background-color: #e6e6e6;
+                --inverted-text-color: #fff;
+                --header-background-color: #35424a;
+            }
+
+        /* ----------------------------------------------------------------------------------- */
+        /* 3.2 Header------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+
+        /* ----------------------------------------------------------------------------------- */
+        /* 3.3 Main--------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+            #showcase {
+                --showcase-background: rgba(53, 66, 74, 0.6);
+            }
+
+        /* ----------------------------------------------------------------------------------- */
+        /* 3.4 Footer------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 4. General HTML Tag Styles-------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+    /* In this section of the stylesheet we are providing default styling for the type on the site, 
+        setting up a default style for data tables and lists and so on. */
+
+    body {
+        background-color: var(--main-page-background-color);
+    }
+    
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a:visited,
+    a:active,
+    a:focus {
+        color: inherit;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 5. Utility Styles----------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+    /* For example, a class that removes the default list style for lists we're going to display as 
+    flex items or in some other way. If you have a few styling choices you know you will want to 
+    apply to lots of different elements */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 6. Sitewide Styles---------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+    /* Everything that is used sitewide. That might be things like the basic page 
+	layout, the header, navigation styling, and so on. */
+
+    /* ----------------------------------------------------------------------------------- */
+    /* 6.1 Page Wide/Multiple Areas ------------------------------------------------------ */
+    /* ----------------------------------------------------------------------------------- */
+
+            #page-container {
+                position: relative;
+                min-height: 100vh;
+            }
+            
+            .container {
+                width: 80%;
+                margin: auto;
+            
+                overflow: hidden;
+            }
+            
+            .container_narrow {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            
+                max-width: 70%;
+                margin: auto;
+            }
+            
+            .button_1 {
+                height: 38px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border: 0;
+            
+                color: var(--inverted-text-color);
+                background: var(--main-accent-color);
+            
+                font-size: 1rem;
+                font-weight: 600;
+            
+                border-radius: 4px;
+            }
+            
+            .button_1:hover {
+                background-color: var(--nav-bar-highlight-accent);
+                transition: background-color 0.1s ease-in;
+            }
+            
+            .button_1:not(:hover) {
+                transition: background-color 0.1s ease-out;
+            }
+            
+            .dark {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                padding: 2rem;
+                border-radius: 5px;
+            
+                background: #62686b;
+                color: var(--inverted-text-color);
+            
+            }
+            
+            .text_highlight {
+                color: var(--main-accent-color);
+            }
+            
+            
+            .page-title {
+                font-size: 24px
+            }
+            
+            .panel,
+            .no-panel {
+                padding: 20px;
+                border-radius: 5px;
+            }
+            
+            .panel {
+                border: #ccc solid 1px;
+                background: var(--panel-background-color);
+            }
+
+    /* ----------------------------------------------------------------------------------- */
+    /* 6.2 Header------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------------- */
+
+        header {
+            min-height: 70px;
+            padding-top: 30px;
+            border-bottom: var(--main-accent-color) 3px solid;
+        
+            color: var(--inverted-text-color);
+            background-color: var(--header-background-color);
+        }
+        
+        header #branding {
+            float: left;
+        }
+        
+        header #branding h1 {
+            margin: 0;
+        }
+        
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        
+        header nav .highlight {
+            color: var(--main-accent-color);
+        }
+        
+        header li {
+            display: inline;
+            float: left;
+        
+            padding: 1rem;
+        
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: bold;
+        
+            color: var(--inverted-text-color);
+        }
+        
+        header li:hover {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            padding: 1rem;
+            background-color: var(--nav-bar-highlight-accent);
+            color: var(--inverted-text-color);
+        
+            transition: background-color 0.1s ease-in;
+        }
+        
+        header li:not(:hover) {
+            transition: background-color 0.1s ease-out;
+        }
+        
+        header .current {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            padding: 1rem;
+        
+            background-color: var(--main-accent-color);
+            font-weight: bold;
+            color: var(--inverted-text-color);
+        }
+
+    /* ----------------------------------------------------------------------------------- */
+    /* 6.3 Main--------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------------- */
+
+        /* Showcase -----------------------------------------------------------------------*/
+            #showcase {
+                min-height: 300px;
+                width: 100%;
+                margin: auto;
+            
+                background-image: url('../img/showcase2.jpg');
+                background-position: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-origin: border-box;
+                background-clip: border-box;
+                background-color: var(--showcase-background);
+                background-blend-mode: multiply;
+            
+                text-align: center;
+                color: var(--inverted-text-color);
+            }
+            
+            #showcase h1 {
+                margin-top: 50px;
+                font-size: 4rem;
+            }
+            
+            #showcase p {
+                margin-top: 30px;
+            
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+    
+        /* Main Content -------------------------------------------------------------------- */
+            #main-content {
+                margin-top: 50px;
+            }
+        
+        /* Newsletter area ------------------------------------------------------------------*/
+            #newsletter {
+                padding: 15px;
+            
+                color: var(--inverted-text-color);
+                background: var(--header-background-color);
+            }
+            
+            #newsletter form {
+                display: flex;
+            }
+            
+            #newsletter .wrapper {
+                display: flex;
+                flex-direction: row;
+            
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            
+            .wrapper .form-column {
+                display: flex;
+                list-style: none;
+            
+                padding: 10px;
+            }
+            
+            .wrapper .form-column label {
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin-right: 4px;
+            }
+            
+            .wrapper .form-column input {
+                border-radius: 4px;
+                width: 180px;
+                padding: 4px;
+            }
+
+    /* Boxes --------------------------------------------------------------------------------------------------------*/
+    #boxes {
+        margin-top: 20px;
+    }
+    
     #boxes .box {
-        text-align: center;
-    }
-
-    .container,
-    #image {
-        width: 90%;
-    }
-
-    #image {
-        margin-top: 70px;
-    }
-
-    .container_narrow {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        float: left;
     
-        max-width: 100%;
-        margin: auto;
-    }
-
-    #branding h1 {
-        font-size: 2.5rem;
-    }
-
-    header li {
-        display: block;
-
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
+        text-align: center;
+    
+        width: 30%;
+    
+        margin: 10px;
+        padding: 10px;
+    
+        border: 4px solid transparent;
         border-radius: 4px;
-
-        font-weight: 700;
     }
-
-    header {
-        padding-bottom: 20px;
+    
+    #boxes .box img {
+        height: 90px;
     }
-
-    header li:hover {
-        padding: 0.5rem;
+    
+    #boxes .box:hover {
+        border: 4px var(--main-accent-color) solid;
+        border-radius: 4px;
+        transition: border-color 0.3s ease-in;
     }
-
-    header .current {
-        padding: 0.5rem;
+    
+    #boxes .box:not(:hover) {
+        border: 4px solid transparent;
+        transition: border-color 0.5s ease-out;
     }
-
-    #showcase h1 {
-        margin-top: 40px;
-
-        font-size: 2.5rem;
+    
+    /* Sidebar---------------------------------------------------- */
+    aside#sidebar {
+        float: right;
+        width: 30%;
+        margin-top: 10px;
     }
-
-    #showcase p {
-        font-size: 1.25rem;
+    
+    aside#sidebar h3 {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 4px #35424a;
     }
-
-    #newsletter h1 {
-        font-size: 1.4rem
+    
+    aside#sidebar p {
+        font-style: italic;
     }
-
-    #newsletter form {
-        flex-direction: column;
-    }
-
-    #newsletter .wrapper {
-        flex-direction: column;
-    }
-
-    #newsletter .wrapper label {
-        font-size: 1rem;
+    
+    aside#sidebar a {
+        text-decoration: none;
+    
+        color: var(--inverted-text-color);
         font-weight: bold;
     }
     
-    .wrapper .form-column {
-        list-style: none;
-        padding: 8px;
+    aside#sidebar ul li {
+        list-style-type: none;
+    
+        margin-top: 0.5rem;
     }
     
-    .wrapper .form-column input {
-        border-radius: 4px;
-        padding: 8px;
+    /* Main-col---------------------------------------------- */
+    div#main-col {
+        float: left;
+        width: 65%;
     }
-
-    .dark {
-        margin-top: 40px;
-    }
-
-    #boxes .box {
-        max-width: 90%;
-        margin: auto;
+    
+    div#main-col article {
         margin-bottom: 1rem;
     }
-
-    #boxes .box img {
-        height: 70px;
+    
+    div#main-col a {
+        text-decoration: none;
+    
+        color: var(--main-accent-color);
+        font-weight: bold;
     }
 
-    #sidebar p,
-    #sidebar ul li {
-        text-align: left;
-    }
+    /* ----------------------------------------------------------------------------------- */
+    /* 6.4 Footer------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------------- */
 
-    div#main-col article {
-        margin-bottom: 0.5rem;
-    }
+        footer {
+            width: 100%;
+            padding: 30px 0 30px 0;
+            margin-top: 100px;
+        
+            color: var(--inverted-text-color);
+            background-color: var(--main-accent-color);
+            font-weight: 700;
+        }
+        
+        .container_footer_main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        .container_footer_vertical {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .container_footer_vertical h4 {
+            font-size: 1.3rem;
+        }
+        
+        .container_footer_vertical li {
+            margin-bottom: 0.25rem;
+            list-style-type: none;
+        
+            font-weight: 500;
+        }
+        
+        footer p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin-top: 3rem;
+        
+            font-style: italic;
+        }
 
-    .container_footer_main {
-        flex-direction: column;
-        justify-content: space-evenly;
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 7. Specific Component Styles------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+        /* Include CSS for specific things, broken down by the context, page, or 
+			 even component in which they are used. */
 
-        padding-left: 2rem;
-    }
+    /* Bottom image section, index.html -----------------------*/
+        #image {
+            margin-top: 50px;
+            width: 60%;
+            margin: auto;
+        }
 
-    .container_footer_vertical {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+        .image-container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
 
-    .container_footer_vertical h4 {
-        font-size: 1.3rem;
-    }
+        .image-container img {
+            width: 100%;
+        }
 
-    .container_footer_vertical li {
-        margin-bottom: 0.25rem;
-        list-style-type: none;
 
-        font-weight: 500;
-    }
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/* || 8. Media Queries------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+    /*NOTES: each frame below is for a particular media query. Wrap each breakpoint media query around a copy of the sectional dividers below */
+    /* mobile/standard CSS/mobile first design use min-width:*/
+    /* 0em/0px to <43.75em/<700px for mobile*/
+    /* min-width of 43.75em/700px for tablet*/
+    /* min-width of 62em/992px for small desktop/laptop screens*/
+    /* min-width of 87em/1392px for large desktop screens*/
 
-    footer p {
-        font-size: 1rem;
-        font-weight: 500;
-    }
-}
+    @media(max-width: 768px) {
+        /* ----------------------------------------------------------------------------------- */
+        /* Page Wide/Multiple Areas ---------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+                header #branding,
+                header nav,
+                header nav li,
+                #newsletter h1,
+                #newsletter form,
+                #boxes .box,
+                div#main-col,
+                aside#sidebar {
+                    float: none;
+                    width: 100%;
+                }
+            
+                header #branding,
+                header nav,
+                header nav li,
+                #newsletter h1,
+                #newsletter form,
+                #boxes .box {
+                    text-align: center;
+                }
+            
+                .container,
+                #image {
+                    width: 90%;
+                }
+            
+                #image {
+                    margin-top: 70px;
+                }
+            
+                .container_narrow {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+            
+                    max-width: 100%;
+                    margin: auto;
+                }
+
+            /* ----------------------------------------------------------------------------------- */
+            /* Header------------------------------------------------------------------------- */
+            /* ----------------------------------------------------------------------------------- */
+
+            
+                #branding h1 {
+                    font-size: 2.5rem;
+                }
+            
+                header li {
+                    display: block;
+            
+                    margin-bottom: 0.5rem;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+            
+                    font-weight: 700;
+                }
+            
+                header {
+                    padding-bottom: 20px;
+                }
+            
+                header li:hover {
+                    padding: 0.5rem;
+                }
+            
+                header .current {
+                    padding: 0.5rem;
+                }
+                
+                
+            /* ----------------------------------------------------------------------------------- */
+            /* Main------------------------------------------------------------------------------- */
+            /* ----------------------------------------------------------------------------------- */
+                .dark {
+                    margin-top: 40px;
+                }
+
+                #showcase h1 {
+                    margin-top: 40px;
+            
+                    font-size: 2.5rem;
+                }
+            
+                #showcase p {
+                    font-size: 1.25rem;
+                }
+            
+                #newsletter h1 {
+                    font-size: 1.4rem
+                }
+            
+                #newsletter form {
+                    flex-direction: column;
+                }
+            
+                #newsletter .wrapper {
+                    flex-direction: column;
+                }
+            
+                #newsletter .wrapper label {
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            
+                .wrapper .form-column {
+                    list-style: none;
+                    padding: 8px;
+                }
+            
+                .wrapper .form-column input {
+                    border-radius: 4px;
+                    padding: 8px;
+                }
+            
+                #boxes .box {
+                    max-width: 90%;
+                    margin: auto;
+                    margin-bottom: 1rem;
+                }
+            
+                #boxes .box img {
+                    height: 70px;
+                }
+            
+                #sidebar p,
+                #sidebar ul li {
+                    text-align: left;
+                }
+            
+                div#main-col article {
+                    margin-bottom: 0.5rem;
+                }
+
+        /* ----------------------------------------------------------------------------------- */
+        /* Footer----------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------------------- */
+            
+                .container_footer_main {
+                    flex-direction: column;
+                    justify-content: space-evenly;
+            
+                    padding-left: 2rem;
+                }
+            
+                .container_footer_vertical {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+            
+                .container_footer_vertical h4 {
+                    font-size: 1.3rem;
+                }
+            
+                .container_footer_vertical li {
+                    margin-bottom: 0.25rem;
+                    list-style-type: none;
+            
+                    font-weight: 500;
+                }
+            
+                footer p {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
