@@ -7,7 +7,6 @@
     --panel-background-color: #e6e6e6;
     --inverted-text-color: #fff;
     --header-background-color: #35424a;
-
 }
 
 #showcase {
@@ -63,7 +62,9 @@ a {
     text-decoration: none;
 }
 
-a:visited {
+a:visited,
+a:active,
+a:focus {
     color: inherit;
 }
 
@@ -99,6 +100,7 @@ a:visited {
 
     background: #62686b;
     color: var(--inverted-text-color);
+
 }
 
 .text_highlight {
@@ -382,7 +384,6 @@ footer p {
     margin-top: 3rem;
 
     font-style: italic;
-    font-weight: 600;
 }
 
 /* Services ------------------------------------------------------------------------------------------------------*/
@@ -444,7 +445,7 @@ footer p {
     }
 
     #branding h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     header li {
@@ -455,7 +456,6 @@ footer p {
         border-radius: 4px;
 
         font-weight: 700;
-        font-size: 1.25rem;
     }
 
     header {
